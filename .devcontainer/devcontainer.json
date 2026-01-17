@@ -11,12 +11,7 @@
   },
   "forwardPorts": [5432],
   "postCreateCommand": [
-  "sudo service postgresql start",
-  "sudo -u postgres psql -c \"ALTER USER postgres WITH PASSWORD 'postgres';\"",
-  "sudo sed -i \"s/^local\\s\\+all\\s\\+all\\s\\+.*/local all all md5/\" /etc/postgresql/14/main/pg_hba.conf",
-  "sudo sed -i \"s/^local\\s\\+all\\s\\+postgres\\s\\+.*/local all postgres md5/\" /etc/postgresql/14/main/pg_hba.conf",
-  "sudo service postgresql restart",
-  "cd coderoad && npm install"
+  "sudo service postgresql start"
 ]
 
 }
