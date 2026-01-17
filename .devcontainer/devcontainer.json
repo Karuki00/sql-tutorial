@@ -10,6 +10,8 @@
     }
   },
   "forwardPorts": [5432],
-  "postCreateCommand": "cd coderoad && npm install && sudo sed -i 's/peer/md5/g' /etc/postgresql/*/main/pg_hba.conf && sudo service postgresql restart"
+  "postCreateCommand": "cd coderoad && npm install && sudo service postgresql start && sudo -u postgres psql -c \"ALTER USER postgres WITH PASSWORD 'postgres';\" && sudo sed -i 's/peer/md5/g' /etc/postgresql/*/main/pg_hba.conf && sudo service postgresql restart"
+
+
 
 }
