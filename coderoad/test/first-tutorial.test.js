@@ -4,11 +4,11 @@ const assert = require('assert')
 describe('Database creation', () => {
   it('should have campus database', async () => {
     const client = new Client({
-      host: process.env.PGHOST,
-      port: process.env.PGPORT,
-      user: process.env.PGUSER,
-      password: process.env.PGPASSWORD,
-      database: process.env.PGDATABASE
+      user: 'postgres',
+      password: 'postgres',
+      host: 'localhost',
+      port: 5432,
+      database: 'postgres'
     })
 
     await client.connect()

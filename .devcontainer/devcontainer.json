@@ -1,0 +1,14 @@
+{
+  "name": "SQL Tutorial (Postgres)",
+  "dockerFile": "Dockerfile",
+  "workspaceFolder": "/workspace/project",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "coderoad.coderoad"
+      ]
+    }
+  },
+  "forwardPorts": [5432],
+  "postCreateCommand": "cd coderoad && npm install"
+}
