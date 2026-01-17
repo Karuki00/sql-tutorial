@@ -10,5 +10,6 @@
     }
   },
   "forwardPorts": [5432],
-  "postCreateCommand": "cd coderoad && npm install"
+  "postCreateCommand": "cd coderoad && npm install && sudo sed -i 's/peer/md5/g' /etc/postgresql/*/main/pg_hba.conf && sudo service postgresql restart"
+
 }
