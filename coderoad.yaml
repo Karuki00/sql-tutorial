@@ -1,21 +1,25 @@
 id: tutorial-sql
-
 version: '0.1.0'
+
 config:
   testRunner:
-    command: ./node_modules/.bin/mocha
+    command: npx mocha
     args:
-      tap: --reporter=mocha-tap-reporter
+      - --reporter=mocha-tap-reporter
     directory: coderoad
+
   setup:
     commands:
       - cd coderoad && npm install
+
   repo:
     uri: https://github.com/Karuki00/sql-tutorial
     branch: v0.1.0
+
   dependencies:
     - name: node
       version: '>=10'
+
 levels:
   - id: '1'
     steps:
