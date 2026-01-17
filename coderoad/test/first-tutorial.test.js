@@ -2,7 +2,7 @@ const { Client } = require('pg')
 const assert = require('assert')
 
 describe('Database creation', () => {
-  it('should have campus database', async () => {
+  it('should have pt_maju_jaya database', async () => {
     const client = new Client({
       user: 'postgres',
       password: 'postgres',
@@ -14,7 +14,7 @@ describe('Database creation', () => {
     await client.connect()
 
     const res = await client.query(
-      "SELECT 1 FROM pg_database WHERE datname = 'campus'"
+      "SELECT 1 FROM pg_database WHERE datname = 'pt_maju_jaya';"
     )
 
     await client.end()
