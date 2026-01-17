@@ -5,7 +5,7 @@ config:
   testRunner:
     command: npx mocha
     args:
-      - --reporter=mocha-tap-reporter
+      tap: --reporter=mocha-tap-reporter
     directory: coderoad
 
   setup:
