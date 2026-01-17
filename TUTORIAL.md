@@ -1,5 +1,7 @@
 # Pembelajaran SQL
 
+Pembelajaran SQL untuk LSP
+
 ## 1. Buatlah Database untuk PT Maju Jaya
 
 > Instruksi
