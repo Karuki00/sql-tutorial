@@ -16,6 +16,12 @@ RUN apt update && apt install -y \
   postgresql-contrib \
   nodejs \
   npm
+# ENV setup
+ENV PGUSER=postgres
+ENV PGPASSWORD=postgres
+ENV PGHOST=localhost
+ENV PGPORT=5432
+ENV PGDATABASE=postgres
 
 # Create user
 RUN adduser --disabled-password --gecos '' ${USERNAME}
