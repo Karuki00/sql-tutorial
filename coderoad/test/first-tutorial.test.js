@@ -5,7 +5,7 @@ describe('Database creation', () => {
   it('should have pt_maju_jaya database', async () => {
     const client = new Client({
       user: 'postgres',
-      password: 'postgres',
+      password: process.env.PGPASSWORD,
       host: 'localhost',
       port: 5432,
       database: 'postgres'
